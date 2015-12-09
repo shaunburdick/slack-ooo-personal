@@ -11,7 +11,7 @@ ENV NODE_ENV=production \
     APP_TIMEBOX_END=0 \
     SLACK_TOKEN=xoxb-foo \
     SLACK_AUTO_RECONNECT=true \
-    SLACK_AUTO_MARK=true
+    SLACK_AUTO_MARK=false
 
 ADD . /usr/src/myapp
 
