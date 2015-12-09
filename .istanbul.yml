@@ -1,0 +1,12 @@
+verbose: false
+instrumentation:
+    root: lib/
+    extensions:
+        - .js
+    embed-source: true
+    preserve-comments: true
+reporting:
+    print: summary
+    reports:
+        - lcov
+    dir: ./coverage

@@ -1,0 +1,10 @@
+{
+  "extends": "airbnb/base",
+  "env": {
+    "jasmine": true
+  },
+  "rules": {
+    "strict": 0,
+    "valid-jsdoc" : 2
+  }
+}

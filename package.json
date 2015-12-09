@@ -1,0 +1,40 @@
+{
+  "name": "slack-ooo-personal",
+  "version": "0.1.0",
+  "description": "Personal Out of Office Bot",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "test": "npm run unit",
+    "unit": "jasmine-node test/unit --verbose",
+    "coverage": "istanbul cover --include-all-sources jasmine-node test/unit",
+    "doc": "jsdoc -c ./.jsdocrc .",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shaunburdick/slack-ooo-personal.git"
+  },
+  "author": "Shaun Burdick <git@shaunburdick.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaunburdick/slack-ooo-personal/issues"
+  },
+  "homepage": "https://github.com/shaunburdick/slack-ooo-personal#readme",
+  "engine": "^5.1.0",
+  "devDependencies": {
+    "babel-eslint": "^4.1.5",
+    "eslint": "^1.9.0",
+    "eslint-config-airbnb": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-watch": "^4.3.5",
+    "istanbul": "^0.4.0",
+    "jasmine-node": "^1.14.5",
+    "jsdoc": "git+https://github.com/jsdoc3/jsdoc.git"
+  },
+  "dependencies": {
+    "redact-object": "^1.0.1",
+    "slack-client": "^1.4.1",
+    "winston": "^2.1.0"
+  }
+}
