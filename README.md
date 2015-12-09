@@ -36,6 +36,6 @@ Set them using the `-e` flag while running docker:
 ```
 docker run -it \
 -e SLACK_TOKEN=xobp-blarty-blar-blar \
--e SLACK_MESSAGE='I am out of the office' \
+-e APP_MESSAGE='I am out of the office' \
 shaunburdick/slack-ooo-personal:latest
 ```
