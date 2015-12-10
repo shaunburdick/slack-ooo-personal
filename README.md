@@ -49,3 +49,11 @@ docker run -it \
 -e APP_TIMEBOX_END='2015-12-26 08:00:00' \
 shaunburdick/slack-ooo-personal:latest
 ```
+## Contributing
+1. Create a new branch, please don't work in master directly.
+2. Add failing tests for the change you want to make (if appliciable). Run `npm test` to see the tests fail.
+3. Fix stuff.
+4. Run `npm test` to see if the tests pass. Repeat steps 2-4 until done.
+5. Check code coverage `npm run coverage` and add test paths as needed.
+6. Update the documentation to reflect any changes.
+7. Push to your fork and submit a pull request.
