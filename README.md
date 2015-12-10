@@ -30,7 +30,7 @@ Official Image [shaunburdick/slack-ooo-personal](https://registry.hub.docker.com
 ### Configuration Environment Variables
 You can set the configuration of the bot by using environment variables. ENVIRONMENT_VARIABLE=Default Value
 - APP_MESSAGE='', Your OoO Message
-- APP_REMINDER=28800000, Time to wait before responding to person/channel again (in milleseconds)
+- APP_REMINDER=480, Time to wait before responding to person/channel again (in minutes)
 - APP_RESPOND_DM=true, If true, will respond to Direct messages
 - APP_RESPOND_CHANNEL=false, If true, will respond on Channel mentions
 - APP_TIMEBOX_START=0, Time to start responding (Timestamp in milliseconds, or [parsable](http://dygraphs.com/date-formats.html) date)
