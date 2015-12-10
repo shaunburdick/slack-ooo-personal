@@ -1,4 +1,7 @@
 # Personal Out of Office Bot for Slack
+
+[![Build Status](https://travis-ci.org/shaunburdick/slack-ooo-personal.svg?branch=master)](https://travis-ci.org/shaunburdick/slack-ooo-personal)
+
 This bot acts as you and will respond to DMs and Channel mentions with a message while you are away.
 
 ## Features
