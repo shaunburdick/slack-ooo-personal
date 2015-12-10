@@ -3,11 +3,15 @@
 const logger = require('./lib/logger')();
 const redact = require('redact-object');
 const Bot = require('./lib/bot');
+const Config = require('./lib/config');
+
+let bot;
+let config;
 
 /**
  * Load config
  */
-const config = (() => {
+const rawConfig = (() => {
   let retVal;
   try {
     retVal = require('./config');
@@ -18,35 +22,12 @@ const config = (() => {
   return retVal;
 })();
 
-let bot;
-
-/**
- * Parse a boolean from a string
- *
- * @param  {string} string A string to parse into a boolean
- * @return {mixed}         Either a boolean or the original value
- */
-function parseBool(string) {
-  if (typeof string === 'string') {
-    return /^(true|1)$/i.test(string);
-  }
-
-  return string;
+try {
+  config = Config.parse(rawConfig);
+} catch (error) {
+  logger.error('Could not parse config', error);
+  process.exit(1);
 }
-
-/**
- * Pull config from ENV if set
- */
-config.app.message = process.env.APP_MESSAGE || config.app.message;
-config.app.reminder = parseInt(process.env.APP_REMINDER, 10) || config.app.reminder;
-config.app.respond.dm = parseBool(process.env.APP_RESPOND_DM) || config.app.respond.dm;
-config.app.respond.channel = parseBool(process.env.APP_RESPOND_CHANNEL) || config.app.respond.channel;
-config.app.timebox.start = parseInt(process.env.APP_TIMEBOX_START, 10) || config.app.timebox.start;
-config.app.timebox.end = parseInt(process.env.APP_TIMEBOX_END, 10) || config.app.timebox.end;
-
-config.slack.token = process.env.SLACK_TOKEN || config.slack.token;
-config.slack.autoReconnect = parseBool(process.env.SLACK_AUTO_RECONNECT) || config.slack.autoReconnect;
-config.slack.autoMark = parseBool(process.env.SLACK_AUTO_MARK) || config.slack.autoMark;
 
 logger.info('Using the following configuration:', redact(config, ['token']));
 

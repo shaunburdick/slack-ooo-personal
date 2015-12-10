@@ -4,7 +4,7 @@ MAINTAINER Shaun Burdick <docker@shaunburdick.com>
 
 ENV NODE_ENV=production \
     APP_MESSAGE='I am out of the office' \
-    APP_REMINDER=28800000 \
+    APP_REMINDER=480 \
     APP_RESPOND_DM=true \
     APP_RESPOND_CHANNEL=false \
     APP_TIMEBOX_START=0 \
