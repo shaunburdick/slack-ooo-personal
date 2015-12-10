@@ -6,7 +6,7 @@ This bot acts as you and will respond to DMs and Channel mentions with a message
 - End time: Set an end time and the bot will shut off on a set time
 - Respond to IM/Multi-Person IM when someone directly messages you
 - Respond to a channel where you are directly mentioned (@username)
-- Reminder buffer: Bot will not respond to user/channel until a give time has elapsed (to prevent spamming)
+- Reminder buffer: Bot will not respond to user/channel until a given time has elapsed (to prevent spamming)
 - Auto Mark: Bot can mark all your messages as read
 
 ## Personal Slack Token
@@ -49,6 +49,7 @@ docker run -it \
 -e APP_TIMEBOX_END='2015-12-26 08:00:00' \
 shaunburdick/slack-ooo-personal:latest
 ```
+
 ## Contributing
 1. Create a new branch, please don't work in master directly.
 2. Add failing tests for the change you want to make (if appliciable). Run `npm test` to see the tests fail.
