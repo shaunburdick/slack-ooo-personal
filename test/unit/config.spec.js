@@ -5,7 +5,7 @@ let rawConfig;
 
 describe('Config Parser', () => {
   beforeEach(() => {
-     rawConfig = require(process.env.PWD + '/config.default');
+    rawConfig = require(process.env.PWD + '/config.default');
   });
 
   describe('Boolean Parser', () => {

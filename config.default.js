@@ -1,4 +1,4 @@
-var config = {
+const config = {
   app: {
     message: '', // The message you want to send to users
     timebox: {
