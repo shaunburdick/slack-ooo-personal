@@ -5,7 +5,7 @@ let rawConfig;
 
 describe('Config Parser', () => {
   beforeEach(() => {
-     rawConfig = require(process.env.PWD + '/config.default');
+    rawConfig = require(process.env.PWD + '/config.default');
   });
 
   describe('Boolean Parser', () => {
@@ -37,6 +37,10 @@ describe('Config Parser', () => {
 
     it('should return a null value on a bad date', () => {
       expect(Config.parseDate('foo')).toEqual(null);
+    });
+
+    it('should parse "0" as a numeric zero', () => {
+      expect(Config.parseDate('0')).toEqual(0);
     });
   });
 
