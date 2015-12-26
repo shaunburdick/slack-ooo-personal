@@ -1,6 +1,6 @@
 {
   "name": "slack-ooo-personal",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "Personal Out of Office Bot",
   "main": "app.js",
   "private": true,
@@ -21,7 +21,9 @@
     "url": "https://github.com/shaunburdick/slack-ooo-personal/issues"
   },
   "homepage": "https://github.com/shaunburdick/slack-ooo-personal#readme",
-  "engine": "^5.1.0",
+  "engine": {
+    "node": "^5.1.0"
+  },
   "devDependencies": {
     "babel-eslint": "^4.1.6",
     "eslint": "^1.10.3",
