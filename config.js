@@ -2,8 +2,8 @@ const config = {
   app: {
     message: 'I am on vacation until Monday, April 25th', // The message you want to send to users
     timebox: {
-      start: 2016-04-15, // start timestamp, or parsable date (see http://dygraphs.com/date-formats.html)
-      end: 2016-04-24, // end timestmap, or parsable date (see http://dygraphs.com/date-formats.html)
+      start: '2016-04-14 01:00:00', // start timestamp, or parsable date (see http://dygraphs.com/date-formats.html)
+      end: '2016-04-24 23:00:00', // end timestmap, or parsable date (see http://dygraphs.com/date-formats.html)
     },
     reminder: 480, // minutes, Do not respond to the user for another 8 hours
     respond: {
