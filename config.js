@@ -1,20 +1,20 @@
 const config = {
   app: {
-    message: 'I am on vacation until Monday, April 25th', // The message you want to send to users
+    message: process.env.APP_MESSAGE, // The message you want to send to users
     timebox: {
-      start: '2016-04-14 01:00:00', // start timestamp, or parsable date (see http://dygraphs.com/date-formats.html)
-      end: '2016-04-24 23:00:00', // end timestmap, or parsable date (see http://dygraphs.com/date-formats.html)
+      start: process.env.APP_TIMEBOX_START, // start timestamp, or parsable date (see http://dygraphs.com/date-formats.html)
+      end: process.env.APP_TIMEBOX_END, // end timestmap, or parsable date (see http://dygraphs.com/date-formats.html)
     },
-    reminder: 480, // minutes, Do not respond to the user for another 8 hours
+    reminder: process.env.APP_REMINDER, // minutes, Do not respond to the user for another 8 hours
     respond: {
-      dm: true, // Respond to the user via DM
-      channel: false, // respond in the channel to everyone
+      dm: process.env.APP_RESPOND_DM, // Respond to the user via DM
+      channel: process.env.APP_RESPOND_CHANNEL, // respond in the channel to everyone
     },
   },
   slack: {
-    token: 'xoxp-4897644109-4876068626-35211612884-ce16bd1e67', // get it from https://api.slack.com/web
-    autoReconnect: true,
-    autoMark: false, // Mark messages as read
+    token: process.env.SLACK_TOKEN, // get it from https://api.slack.com/web
+    autoReconnect: process.env.SLACK_AUTO_RECONNECT,
+    autoMark: process.env.SLACK_AUTO_MARK, // Mark messages as read
   },
 };
 
