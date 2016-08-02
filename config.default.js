@@ -10,6 +10,10 @@ const config = {
       dm: true, // Respond to the user via DM
       channel: false, // respond in the channel to everyone
     },
+    response: {
+      dmprefix: "Hello ${user}. I'm currently out of the office with message:\n\n", // '${user}' will be replaced with user contacting you
+      channelprefix: "Hello ${channel}. I'm currently out of the office with message:\n\n", // '${channel}' will be replaced with the channel name
+    },
   },
   slack: {
     token: 'xoxb-Your-Token', // get it from https://api.slack.com/web
