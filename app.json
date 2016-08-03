@@ -55,5 +55,5 @@
       "value": "production"
     }
   },
-  "image": "heroku/nodejs",
+  "image": "heroku/nodejs"
 }
