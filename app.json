@@ -1,0 +1,59 @@
+{
+  "name": "Slack OOO Personal",
+  "description": "Your personal Slack Out of Office bot",
+  "keywords": [
+    "slack",
+    "bot",
+    "ooo",
+    "out of office"
+  ],
+  "repository": "https://github.com/shaunburdick/slack-ooo-personal",
+  "env": {
+    "APP_MESSAGE": {
+      "description": "Your out of office message"
+    },
+    "APP_REMINDER": {
+      "description": "Time to wait before responding to person/channel again (in minutes)",
+      "value": "480"
+    },
+    "APP_RESPOND_DM": {
+      "description": "If true, will response to Direct Message",
+      "value": "true"
+    },
+    "APP_RESPOND_CHANNEL": {
+      "description": "If true, will response to Channel messages",
+      "value": "false"
+    },
+    "APP_RESPOND_DMPREFIX": {
+      "description": "Default response to Direct Messages",
+      "value": "Hello ${user}. I'm currently out of the office with message:\n\n"
+    },
+    "APP_RESPOND_CHANNELPREFIX": {
+      "description": "Default response to Channel Messages",
+      "value": "Hello ${channel}. I'm currently out of the office with message:\n\n"
+    },
+    "APP_TIMEBOX_START": {
+      "description": "Time to start responding (Timestamp in milliseconds, or parsable date)",
+      "value": "0"
+    },
+    "APP_TIMEBOX_END": {
+      "description": "Time to stop responding (Timestamp in milliseconds, or parsable date)",
+      "value": "0"
+    },
+    "SLACK_TOKEN": {
+      "description": "Your Slack token"
+    },
+    "SLACK_AUTO_RECONNECT": {
+      "description": "Reconnect on disconnect",
+      "value": "true"
+    },
+    "SLACK_AUTO_MARK": {
+      "description": "Mark messages read",
+      "value": "false"
+    },
+    "NODE_ENV": {
+      "value": "production"
+    }
+  },
+  "image": "heroku/nodejs",
+}
