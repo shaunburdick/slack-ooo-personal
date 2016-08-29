@@ -1,6 +1,6 @@
 # Personal Out of Office Bot for Slack
 
-[![Build Status](https://travis-ci.org/shaunburdick/slack-ooo-personal.svg?branch=master)](https://travis-ci.org/shaunburdick/slack-ooo-personal) [![Docker Pulls](https://img.shields.io/docker/pulls/shaunburdick/slack-ooo-personal.svg?maxAge=2592000)](https://hub.docker.com/r/shaunburdick/slack-ooo-personal/)
+[![Build Status](https://travis-ci.org/shaunburdick/slack-ooo-personal.svg?branch=master)](https://travis-ci.org/shaunburdick/slack-ooo-personal) [![Docker Pulls](https://img.shields.io/docker/pulls/shaunburdick/slack-ooo-personal.svg?maxAge=2592000)](https://hub.docker.com/r/shaunburdick/slack-ooo-personal/) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 

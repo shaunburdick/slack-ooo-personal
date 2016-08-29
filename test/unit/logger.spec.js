@@ -1,3 +1,4 @@
+/* eslint-env node, jasmine */
 'use strict';
 
 const winston = require('winston');

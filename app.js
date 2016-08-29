@@ -31,7 +31,7 @@ try {
 
 logger.info('Using the following configuration:', redact(config, ['token']));
 
-function end() {
+function end () {
   logger.info('Ending out of office...');
   if (bot instanceof Bot) {
     bot.stop();
@@ -39,7 +39,7 @@ function end() {
   process.exit();
 }
 
-function start() {
+function start () {
   logger.info('Starting bot...');
   bot = new Bot(config);
   setTimeout(() => { bot.start(); }, 1000);

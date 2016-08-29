@@ -1,3 +1,4 @@
+/* eslint-env node, jasmine */
 'use strict';
 
 const Config = require(process.env.PWD + '/lib/config');
