@@ -1,22 +1,23 @@
 {
   "name": "slack-ooo-personal",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Personal Out of Office Bot",
   "main": "app.js",
   "private": true,
   "scripts": {
-    "test": "npm run unit",
-    "unit": "jasmine-node test/unit --verbose",
-    "coverage": "istanbul cover --include-all-sources jasmine-node test/unit",
+    "test": "npm run lint && npm run unit",
+    "unit": "nyc --all tape ./test/*.test.js | faucet && nyc report",
     "doc": "jsdoc -c ./.jsdocrc .",
-    "start": "node app.js"
+    "start": "node app.js",
+    "lint": "semistandard --verbose | snazzy",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/shaunburdick/slack-ooo-personal.git"
   },
   "author": "Shaun Burdick <git@shaunburdick.com>",
-  "license": "ISC",
+  "license": "GPL",
   "bugs": {
     "url": "https://github.com/shaunburdick/slack-ooo-personal/issues"
   },
@@ -25,18 +26,32 @@
     "node": "^5.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^4.1.6",
-    "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^2.1.1",
+    "coveralls": "^2.11.12",
+    "faucet": "0.0.1",
     "gulp": "^3.9.0",
     "gulp-watch": "^4.3.5",
     "istanbul": "^0.4.1",
     "jasmine-node": "^1.14.5",
-    "jsdoc": "git+https://github.com/jsdoc3/jsdoc.git"
+    "jsdoc": "^3.4.0",
+    "nyc": "^8.1.0",
+    "semistandard": "^8.0.0",
+    "snazzy": "^4.0.1",
+    "tape": "^4.6.0"
   },
   "dependencies": {
-    "botkit": "0.0.4",
+    "botkit": "^0.2.2",
     "redact-object": "^1.0.1",
     "winston": "^2.1.0"
+  },
+  "semistandard": {
+    "ignore": [
+      "coverage",
+      "doc"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.js"
+    ]
   }
 }

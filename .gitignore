@@ -1,5 +1,6 @@
 node_modules
 npm-debug.log
-config.*
+config.js
 .DS_Store
 coverage/
+.nyc_output/
