@@ -6,11 +6,11 @@
   "private": true,
   "scripts": {
     "test": "npm run lint && npm run unit",
-    "unit": "jasmine-node test/unit --verbose",
-    "coverage": "istanbul cover --include-all-sources jasmine-node test/unit",
+    "unit": "nyc --all tape ./test/*.test.js | faucet && nyc report",
     "doc": "jsdoc -c ./.jsdocrc .",
     "start": "node app.js",
-    "lint": "semistandard --verbose | snazzy"
+    "lint": "semistandard --verbose | snazzy",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -26,17 +26,32 @@
     "node": "^5.1.0"
   },
   "devDependencies": {
+    "coveralls": "^2.11.12",
+    "faucet": "0.0.1",
     "gulp": "^3.9.0",
     "gulp-watch": "^4.3.5",
     "istanbul": "^0.4.1",
     "jasmine-node": "^1.14.5",
     "jsdoc": "^3.4.0",
+    "nyc": "^8.1.0",
     "semistandard": "^8.0.0",
-    "snazzy": "^4.0.1"
+    "snazzy": "^4.0.1",
+    "tape": "^4.6.0"
   },
   "dependencies": {
     "botkit": "^0.2.2",
     "redact-object": "^1.0.1",
     "winston": "^2.1.0"
+  },
+  "semistandard": {
+    "ignore": [
+      "coverage",
+      "doc"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.js"
+    ]
   }
 }
