@@ -1,9 +1,9 @@
 # Personal Out of Office Bot for Slack
 
 [![Build Status](https://travis-ci.org/shaunburdick/slack-ooo-personal.svg?branch=master)](https://travis-ci.org/shaunburdick/slack-ooo-personal) [![Docker Pulls](https://img.shields.io/docker/pulls/shaunburdick/slack-ooo-personal.svg?maxAge=2592000)](https://hub.docker.com/r/shaunburdick/slack-ooo-personal/)
-[![Coverage Status](https://coveralls.io/repos/github/shaunburdick/slack-ooo-personal/badge.svg?branch=update-dep)](https://coveralls.io/github/shaunburdick/slack-ooo-personal?branch=update-dep) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
+[![Coverage Status](https://coveralls.io/repos/github/shaunburdick/slack-ooo-personal/badge.svg?branch=update-dep)](https://coveralls.io/github/shaunburdick/slack-ooo-personal?branch=update-dep) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-round)](https://github.com/Flet/semistandard)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/shaunburdick/slack-ooo-personal) [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 This bot acts as you and will respond to DMs and Channel mentions with a message while you are away.
 
@@ -63,6 +63,5 @@ shaunburdick/slack-ooo-personal:latest
 2. Add failing tests for the change you want to make (if appliciable). Run `npm test` to see the tests fail.
 3. Fix stuff.
 4. Run `npm test` to see if the tests pass. Repeat steps 2-4 until done.
-5. Check code coverage `npm run coverage` and add test paths as needed.
-6. Update the documentation to reflect any changes.
-7. Push to your fork and submit a pull request.
+5. Update the documentation to reflect any changes.
+6. Push to your fork and submit a pull request.
