@@ -1,0 +1,3 @@
+bot:
+  image: shaunburdick/slack-ooo-personal
+  restart: on-failure
