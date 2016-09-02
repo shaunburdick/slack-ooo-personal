@@ -8,7 +8,10 @@ const config = {
     reminder: 480, // minutes, Do not respond to the user for another 8 hours
     respond: {
       dm: true, // Respond to the user via DM
-      channel: false // respond in the channel to everyone
+      channel: false, // respond in the channel to everyone
+      keywords: [ // other keywords to respond to
+
+      ]
     },
     response: {
       dmprefix: "Hello ${user}. I'm currently out of the office with message:\n\n", // '${user}' will be replaced with user contacting you

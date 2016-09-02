@@ -7,6 +7,7 @@ ENV NODE_ENV=production \
     APP_REMINDER=480 \
     APP_RESPOND_DM=true \
     APP_RESPOND_CHANNEL=false \
+    APP_RESPOND_KEYWORDS= \
     APP_TIMEBOX_START=0 \
     APP_TIMEBOX_END=0 \
     SLACK_TOKEN=xoxb-foo \
