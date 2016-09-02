@@ -12,6 +12,7 @@ This bot acts as you and will respond to DMs and Channel mentions with a message
 - End time: Set an end time and the bot will shut off on a set time
 - Respond to IM/Multi-Person IM when someone directly messages you
 - Respond to a channel where you are directly mentioned (@username)
+- Respond to additional keywords (ex 'shaun, burdick')
 - Reminder buffer: Bot will not respond to user/channel until a given time has elapsed (to prevent spamming)
 - Auto Mark: Bot can mark all your messages as read
 
@@ -39,6 +40,7 @@ You can set the configuration of the bot by using environment variables. ENVIRON
 - APP_REMINDER=480, Time to wait before responding to person/channel again (in minutes)
 - APP_RESPOND_DM=true, If true, will respond to Direct messages
 - APP_RESPOND_CHANNEL=false, If true, will respond on Channel mentions
+- APP_RESPOND_KEYWORDS=, A comma separated list of additional keywords to respond to
 - APP_RESPONSE_DMPREFIX='Hello ${user}. I\'m currently out of the office with message:\n\n'
 - APP_RESPONSE_CHANNELPREFIX='Hello ${channel}. I\'m currently out of the office with message:\n\n'
 - APP_TIMEBOX_START=0, Time to start responding (Timestamp in milliseconds, or [parsable](http://dygraphs.com/date-formats.html) date)

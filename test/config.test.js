@@ -44,6 +44,14 @@ test('Config: date parsing', (assert) => {
   assert.end();
 });
 
+test('Config: list parsing', (assert) => {
+  assert.deepEqual(Config.parseList('foo, bar'), ['foo', 'bar'], 'Parse list');
+  assert.deepEqual(Config.parseList('foo'), ['foo'], 'Parse single item');
+  assert.equal(Config.parseList(''), null, 'Return null on empty list');
+
+  assert.end();
+});
+
 test('Config: parse default config as is', (assert) => {
   assert.equal(Config.parse(rawConfig), rawConfig);
   assert.end();

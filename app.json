@@ -24,6 +24,10 @@
       "description": "If true, will response to Channel messages",
       "value": "false"
     },
+    "APP_RESPOND_KEYWORDS": {
+      "description": "Comma separated list of other keywords to respond to",
+      "value": ""
+    },
     "APP_RESPOND_DMPREFIX": {
       "description": "Default response to Direct Messages",
       "value": "Hello ${user}. I'm currently out of the office with message:\n\n"

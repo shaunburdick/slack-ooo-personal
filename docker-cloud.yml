@@ -1,3 +1,16 @@
 bot:
   image: shaunburdick/slack-ooo-personal
   restart: on-failure
+  environment:
+    APP_MESSAGE: ''
+    APP_REMINDER: 480
+    APP_RESPOND_DM: true
+    APP_RESPOND_CHANNEL: false
+    APP_RESPOND_KEYWORDS: ''
+    APP_RESPONSE_DMPREFIX: "Hello ${user}. I'm currently out of the office with message:\n\n"
+    APP_RESPONSE_CHANNELPREFIX: "Hello ${channel}. I'm currently out of the office with message:\n\n"
+    APP_TIMEBOX_START: 0
+    APP_TIMEBOX_END: 0
+    SLACK_TOKEN: 'xoxb-foo'
+    SLACK_AUTO_RECONNECT: true
+    SLACK_AUTO_MARK: false
