@@ -2,6 +2,8 @@ FROM rezzza/docker-node:latest
 
 MAINTAINER Shaun Burdick <docker@shaunburdick.com>
 
+RUN apk add -U tzdata
+
 ENV NODE_ENV=production \
     APP_MESSAGE='I am out of the office' \
     APP_REMINDER=480 \
