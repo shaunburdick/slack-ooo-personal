@@ -41,8 +41,8 @@ You can set the configuration of the bot by using environment variables. ENVIRON
 - APP_RESPOND_DM=true, If true, will respond to Direct messages
 - APP_RESPOND_CHANNEL=false, If true, will respond on Channel mentions
 - APP_RESPOND_KEYWORDS=, A comma separated list of additional keywords to respond to
-- APP_RESPONSE_DMPREFIX='Hello ${user}. I\'m currently out of the office with message:\n\n'
-- APP_RESPONSE_CHANNELPREFIX='Hello ${channel}. I\'m currently out of the office with message:\n\n'
+- APP_DMPREFIX='Hello ${user}. I\'m currently out of the office with message:\n\n'
+- APP_CHANNELPREFIX='Hello ${channel}. I\'m currently out of the office with message:\n\n'
 - APP_TIMEBOX_START=0, Time to start responding (Timestamp in milliseconds, or [parsable](http://dygraphs.com/date-formats.html) date)
 - APP_TIMEBOX_END=0, Time to stop responding (Timestamp in milliseconds, or [parsable](http://dygraphs.com/date-formats.html) date)
 - SLACK_TOKEN=xoxb-foo, Your Slack Token
