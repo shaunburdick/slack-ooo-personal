@@ -17,7 +17,7 @@
     "url": "git+ssh://git@github.com/shaunburdick/slack-ooo-personal.git"
   },
   "author": "Shaun Burdick <git@shaunburdick.com>",
-  "license": "GPL",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/shaunburdick/slack-ooo-personal/issues"
   },
