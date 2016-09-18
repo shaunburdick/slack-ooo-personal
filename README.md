@@ -15,9 +15,18 @@ This bot acts as you and will respond to DMs and Channel mentions with a message
 - Respond to additional keywords (ex 'shaun, burdick')
 - Reminder buffer: Bot will not respond to user/channel until a given time has elapsed (to prevent spamming)
 - Auto Mark: Bot can mark all your messages as read
+- The bot can be configured to announce out of office users to specific channels on specific times (you must be in that channel to make the announcement)
 
 ## Personal Slack Token
 You can generate your personal Slack Token here: [https://api.slack.com/web](https://api.slack.com/web)
+
+## Announcements
+The bot can announce which users are out of office on a schedule. To enable this feature, you need to provide the bot with a list of channels to make the announcement and at what times (local to bot).
+- **app.announce.channels**: this is an array of channel names to announce to
+  - The bot *must* be a member of the channel in order to make the announcements
+  - channels names *must* not contain the starting `#`
+- **app.announce.times**: this is an array of times each day to make the announcement
+  - Each time will be considered as 24-hour time, (ie `13:00` is 1:00 pm)
 
 ## Install
 1. Clone this [repository](https://github.com/shaunburdick/slack-ooo-personal.git)
@@ -45,6 +54,8 @@ You can set the configuration of the bot by using environment variables. ENVIRON
 - APP_RESPONSE_CHANNELPREFIX='Hello ${channel}. I\'m currently out of the office with message:\n\n'
 - APP_TIMEBOX_START=0, Time to start responding (Timestamp in milliseconds, or [parsable](http://dygraphs.com/date-formats.html) date)
 - APP_TIMEBOX_END=0, Time to stop responding (Timestamp in milliseconds, or [parsable](http://dygraphs.com/date-formats.html) date)
+- *APP_ANNOUNCE_CHANNELS*=general,random, A list of channels to announce OoO on
+- *APP_ANNOUNCE_TIMES*=08:00,16:00, A list of times to announce OoO users
 - SLACK_TOKEN=xoxb-foo, Your Slack Token
 - SLACK_AUTO_RECONNECT=true, Reconnect on disconnect
 - SLACK_AUTO_MARK=false, Mark messages as read

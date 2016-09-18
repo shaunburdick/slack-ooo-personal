@@ -11,6 +11,8 @@ bot:
     APP_RESPONSE_CHANNELPREFIX: "Hello ${channel}. I'm currently out of the office with message:\n\n"
     APP_TIMEBOX_START: 0
     APP_TIMEBOX_END: 0
+    APP_ANNOUNCE_CHANNELS: ''
+    APP_ANNOUNCE_TIMES: ''
     SLACK_TOKEN: 'xoxb-foo'
     SLACK_AUTO_RECONNECT: true
     SLACK_AUTO_MARK: false
