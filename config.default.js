@@ -1,3 +1,5 @@
+/* eslint no-template-curly-in-string:0 */
+
 const config = {
   app: {
     message: '', // The message you want to send to users
@@ -16,6 +18,10 @@ const config = {
     response: {
       dmprefix: "Hello ${user}. I'm currently out of the office with message:\n\n", // '${user}' will be replaced with user contacting you
       channelprefix: "Hello ${channel}. I'm currently out of the office with message:\n\n" // '${channel}' will be replaced with the channel name
+    },
+    announce: {
+      channels: [], // no need to include #
+      times: [] // 24 hours
     }
   },
   slack: {
