@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "test": "npm run lint && npm run unit",
-    "unit": "nyc --all tape ./test/*.test.js | faucet && nyc report",
+    "unit": "nyc --all tape ./test/*.test.js | tap-spec && nyc report",
     "doc": "jsdoc -c ./.jsdocrc .",
     "start": "node app.js",
     "lint": "semistandard --verbose | snazzy",
@@ -27,19 +27,19 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.12",
-    "faucet": "0.0.1",
     "gulp": "^3.9.0",
     "gulp-watch": "^4.3.5",
     "istanbul": "^0.4.1",
     "jasmine-node": "^1.14.5",
     "jsdoc": "^3.4.0",
-    "nyc": "^8.1.0",
+    "nyc": "^10.0.0",
     "semistandard": "^9.0.0",
     "snazzy": "^5.0.0",
+    "tap-spec": "^4.1.1",
     "tape": "^4.6.0"
   },
   "dependencies": {
-    "botkit": "^0.2.2",
+    "botkit": "^0.4.0",
     "moment": "^2.15.0",
     "redact-object": "^2.0.0",
     "winston": "^2.1.0"

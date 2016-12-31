@@ -5,7 +5,7 @@ const moment = require('moment');
 const Bot = require(process.env.PWD + '/lib/bot');
 const config = require(process.env.PWD + '/config.default');
 
-test('Bot: Shoud instantiate', (assert) => {
+test('Bot: Should instantiate', (assert) => {
   const bot = new Bot(config);
 
   assert.ok(bot);
