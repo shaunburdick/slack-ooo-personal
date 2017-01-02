@@ -41,6 +41,7 @@
   "dependencies": {
     "botkit": "^0.4.0",
     "moment": "^2.15.0",
+    "moment-timezone": "^0.5.11",
     "redact-object": "^2.0.0",
     "winston": "^2.1.0"
   },
