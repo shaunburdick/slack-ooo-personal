@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/shaunburdick/slack-ooo-personal/issues"
   },
-  "homepage": "https://github.com/shaunburdick/slack-ooo-personal#readme",
+  "homepage": "https://github.com/shaunburdick/slack-ooo-personal",
   "engine": {
     "node": "^5.1.0"
   },
