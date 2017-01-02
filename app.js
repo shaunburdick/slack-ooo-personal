@@ -49,7 +49,7 @@ function start () {
   if (config.app.timebox.end > rightnow) {
     const endDate = new Date(config.app.timebox.end);
     logger.info(`Waiting until ${endDate} for end time...`);
-    setTimeout(end, config.app.timebox.end - rightnow);
+    setTimeout(end, (config.app.timebox.end - rightnow) / 1000);
   }
 }
 
