@@ -48,8 +48,19 @@ function start () {
   const rightnow = Date.now();
   if (config.app.timebox.end > rightnow) {
     const endDate = new Date(config.app.timebox.end);
+    const diffMS = (config.app.timebox.end - rightnow);
+    // Check if diff is greater than MAX_INT32
+    // This causes the setTimeout to overflow and launch immediataly
+    if (diffMS > 0x7FFFFFFF) {
+      logger.error(`
+        32 Int overflow error!
+        ${endDate} is too far into the future.
+        Set this to something less than 24 days or 0
+      `);
+      process.exit(1);
+    }
     logger.info(`Waiting until ${endDate} for end time...`);
-    setTimeout(end, (config.app.timebox.end - rightnow) / 1000);
+    setTimeout(end, diffMS);
   }
 }
 
