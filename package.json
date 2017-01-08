@@ -27,10 +27,6 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.12",
-    "gulp": "^3.9.0",
-    "gulp-watch": "^4.3.5",
-    "istanbul": "^0.4.1",
-    "jasmine-node": "^1.14.5",
     "jsdoc": "^3.4.0",
     "nyc": "^10.0.0",
     "semistandard": "^9.0.0",
