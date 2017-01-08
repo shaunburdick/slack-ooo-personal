@@ -1,6 +1,6 @@
 {
   "name": "slack-ooo-personal",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Personal Out of Office Bot",
   "main": "app.js",
   "private": true,
