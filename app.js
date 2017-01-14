@@ -10,9 +10,19 @@ let bot;
 let config;
 
 // Close the bot gracefully
-ON_DEATH(() => {
+ON_DEATH((signal) => {
   if (bot instanceof Bot) {
     bot.stop();
+  }
+
+  // You need to actually kill the process if you overwrite the signal response
+  switch (signal) {
+    case 'SIGINT':
+    case 'SIGTERM':
+      // give the last message a chance to send
+      setTimeout(process.exit, 1000);
+      break;
+    default:
   }
 });
 
