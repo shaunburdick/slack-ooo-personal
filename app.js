@@ -4,9 +4,17 @@ const logger = require('./lib/logger')();
 const redact = require('redact-object');
 const Bot = require('./lib/bot');
 const Config = require('./lib/config');
+const ON_DEATH = require('death');
 
 let bot;
 let config;
+
+// Close the bot gracefully
+ON_DEATH(() => {
+  if (bot instanceof Bot) {
+    bot.stop();
+  }
+});
 
 /**
  * Load config
