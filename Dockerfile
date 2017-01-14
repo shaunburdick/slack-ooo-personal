@@ -1,4 +1,4 @@
-FROM rezzza/docker-node:latest
+FROM node:alpine
 
 MAINTAINER Shaun Burdick <docker@shaunburdick.com>
 
