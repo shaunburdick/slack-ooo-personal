@@ -26,7 +26,8 @@
     },
     "APP_RESPOND_KEYWORDS": {
       "description": "Comma separated list of other keywords to respond to",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "APP_RESPOND_DMPREFIX": {
       "description": "Default response to Direct Messages",
@@ -71,7 +72,8 @@
   "formation": {
     "bot": {
       "quantity": 1,
-      "size": "free"
+      "size": "free",
+      "type": "bot"
     }
   }
 }
