@@ -11,6 +11,7 @@ const config = {
     respond: {
       dm: true, // Respond to the user via DM
       channel: false, // respond in the channel to everyone
+      bot: false, // respond to bot messages
       keywords: [ // other keywords to respond to
 
       ]
