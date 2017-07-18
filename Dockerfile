@@ -18,6 +18,7 @@ ENV NODE_ENV=production \
     APP_TIMEBOX_END=0 \
     APP_ANNOUNCE_CHANNELS= \
     APP_ANNOUNCE_TIMES= \
+    APP_MIRROR_PINGS=false \
     SLACK_TOKEN=xoxb-foo \
     SLACK_AUTO_RECONNECT=true \
     SLACK_AUTO_MARK=false

@@ -17,6 +17,7 @@ This bot acts as you and will respond to DMs and Channel mentions with a message
 - Reminder buffer: Bot will not respond to user/channel until a given time has elapsed (to prevent spamming)
 - Auto Mark: Bot can mark all your messages as read
 - The bot can be configured to announce out of office users to specific channels on specific times (you must be in that channel to make the announcement)
+- Mirror pings: the bot can be made to send all slack ping messages to your @username channel to keep tabs in one place of everyone who has contacted you during vacation.
 
 ## Personal Slack Token
 You can generate your personal Slack Token here: [https://api.slack.com/custom-integrations/legacy-tokens](https://api.slack.com/custom-integrations/legacy-tokens)
@@ -59,6 +60,7 @@ You can set the configuration of the bot by using environment variables. ENVIRON
 - APP_TIMEBOX_END=0, Time to stop responding (Timestamp in milliseconds, or [parsable](https://www.iso.org/iso-8601-date-and-time-format.html) date)
 - APP_ANNOUNCE_CHANNELS=general,random, A list of channels to announce OoO on
 - APP_ANNOUNCE_TIMES=08:00,16:00, A list of times to announce OoO users
+- APP_MIRROR_PINGS=false, Send all ping/mention messages to your personal @username channel.
 - SLACK_TOKEN=xoxb-foo, Your Slack Token
 - SLACK_AUTO_RECONNECT=true, Reconnect on disconnect
 - SLACK_AUTO_MARK=false, Mark messages as read

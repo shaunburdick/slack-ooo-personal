@@ -24,7 +24,8 @@ const config = {
     announce: {
       channels: [], // no need to include #
       times: [] // 24 hours
-    }
+    },
+    mirrorPings: false // Send all ping messages to your own slack channel (the "@username (you)" channel) so you have a central record of all pings from your vacation.
   },
   slack: {
     token: 'xoxb-Your-Token', // get it from https://api.slack.com/web
