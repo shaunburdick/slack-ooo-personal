@@ -25,7 +25,8 @@ const config = {
       channels: [], // no need to include #
       times: [] // 24 hours
     },
-    mirrorPings: false // Send all ping messages to your own slack channel (the "@username (you)" channel) so you have a central record of all pings from your vacation.
+    mirrorPings: false, // Send all ping messages to your own slack channel (the "@username (you)" channel) so you have a central record of all pings from your vacation.
+    stealthMode: false // use primarily with mirrorPings to disable all responses but still record all pings in your personal channel.
   },
   slack: {
     token: 'xoxb-Your-Token', // get it from https://api.slack.com/web
