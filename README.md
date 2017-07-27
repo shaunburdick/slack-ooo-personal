@@ -72,6 +72,9 @@ docker run -it \
 shaunburdick/slack-ooo-personal:latest
 ```
 
+## Heroku
+**A note for Heroku users** This bot does not have a web server. Due to some initial decisions by Heroku, if you don't supply a web dyno config it will assume one anyways and try to start it. It will then stop your app after 60 seconds becuase it didn't bind to $PORT. To get around this, you will need to adjust the web scale to 0 manually. [Reference](https://stackoverflow.com/questions/40265699/is-it-possible-to-deploy-a-node-js-application-to-heroku-without-a-web-dyno) [Comment](https://github.com/shaunburdick/slack-ooo-personal/issues/20#issuecomment-318375858)
+
 ## Contributing
 1. Create a new branch, please don't work in master directly.
 2. Add failing tests for the change you want to make (if appliciable). Run `npm test` to see the tests fail.
