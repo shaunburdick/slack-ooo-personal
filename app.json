@@ -29,11 +29,11 @@
       "value": "",
       "required": false
     },
-    "APP_RESPOND_DMPREFIX": {
+    "APP_RESPONSE_DMPREFIX": {
       "description": "Default response to Direct Messages",
       "value": "Hello ${user}. I'm currently out of the office with message:\n\n"
     },
-    "APP_RESPOND_CHANNELPREFIX": {
+    "APP_RESPONSE_CHANNELPREFIX": {
       "description": "Default response to Channel Messages",
       "value": "Hello ${channel}. I'm currently out of the office with message:\n\n"
     },
