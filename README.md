@@ -53,10 +53,10 @@ You can set the configuration of the bot by using environment variables. ENVIRON
 - APP_RESPOND_KEYWORDS=, A comma separated list of additional keywords to respond to
 - APP_RESPONSE_DMPREFIX='Hello ${user}. I\'m currently out of the office with message:\n\n'
 - APP_RESPONSE_CHANNELPREFIX='Hello ${channel}. I\'m currently out of the office with message:\n\n'
-- APP_TIMEBOX_START=0, Time to start responding (Timestamp in milliseconds, or [parsable](http://dygraphs.com/date-formats.html) date)
-- APP_TIMEBOX_END=0, Time to stop responding (Timestamp in milliseconds, or [parsable](http://dygraphs.com/date-formats.html) date)
-- *APP_ANNOUNCE_CHANNELS*=general,random, A list of channels to announce OoO on
-- *APP_ANNOUNCE_TIMES*=08:00,16:00, A list of times to announce OoO users
+- APP_TIMEBOX_START=0, Time to start responding (Timestamp in milliseconds, or [parsable](https://www.iso.org/iso-8601-date-and-time-format.html) date)
+- APP_TIMEBOX_END=0, Time to stop responding (Timestamp in milliseconds, or [parsable](https://www.iso.org/iso-8601-date-and-time-format.html) date)
+- APP_ANNOUNCE_CHANNELS=general,random, A list of channels to announce OoO on
+- APP_ANNOUNCE_TIMES=08:00,16:00, A list of times to announce OoO users
 - SLACK_TOKEN=xoxb-foo, Your Slack Token
 - SLACK_AUTO_RECONNECT=true, Reconnect on disconnect
 - SLACK_AUTO_MARK=false, Mark messages as read
