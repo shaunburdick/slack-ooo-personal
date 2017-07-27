@@ -18,7 +18,7 @@ This bot acts as you and will respond to DMs and Channel mentions with a message
 - The bot can be configured to announce out of office users to specific channels on specific times (you must be in that channel to make the announcement)
 
 ## Personal Slack Token
-You can generate your personal Slack Token here: [https://api.slack.com/web](https://api.slack.com/web)
+You can generate your personal Slack Token here: [https://api.slack.com/custom-integrations/legacy-tokens](https://api.slack.com/custom-integrations/legacy-tokens)
 
 ## Announcements
 The bot can announce which users are out of office on a schedule. To enable this feature, you need to provide the bot with a list of channels to make the announcement and at what times (local to bot).
