@@ -6,6 +6,7 @@ bot:
     APP_REMINDER: 480
     APP_RESPOND_DM: true
     APP_RESPOND_CHANNEL: false
+    APP_RESPOND_CHANNEL_PERSONAL: false
     APP_RESPOND_KEYWORDS: ''
     APP_RESPONSE_DMPREFIX: "Hello ${user}. I'm currently out of the office with message:\n\n"
     APP_RESPONSE_CHANNELPREFIX: "Hello ${channel}. I'm currently out of the office with message:\n\n"
@@ -13,6 +14,8 @@ bot:
     APP_TIMEBOX_END: 0
     APP_ANNOUNCE_CHANNELS: ''
     APP_ANNOUNCE_TIMES: ''
+    APP_MIRROR_PINGS: false
+    APP_STEALTH_MODE: false
     SLACK_TOKEN: 'xoxb-foo'
     SLACK_AUTO_RECONNECT: true
     SLACK_AUTO_MARK: false

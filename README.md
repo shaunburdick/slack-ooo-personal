@@ -12,10 +12,13 @@ This bot acts as you and will respond to DMs and Channel mentions with a message
 - End time: Set an end time and the bot will shut off on a set time
 - Respond to IM/Multi-Person IM when someone directly messages you
 - Respond to a channel where you are directly mentioned (@username)
+- Respond to the person who directly mentions you in a channel.
 - Respond to additional keywords (ex 'shaun, burdick')
 - Reminder buffer: Bot will not respond to user/channel until a given time has elapsed (to prevent spamming)
 - Auto Mark: Bot can mark all your messages as read
 - The bot can be configured to announce out of office users to specific channels on specific times (you must be in that channel to make the announcement)
+- Mirror pings: the bot can be made to send all slack ping messages to your @username channel to keep tabs in one place of everyone who has contacted you during vacation.
+- Stealth mode: used with Mirror pings, the bot acts according to settings, except it never replies on any pings (but it still harvests all pings to your @username channel).
 
 ## Personal Slack Token
 You can generate your personal Slack Token here: [https://api.slack.com/custom-integrations/legacy-tokens](https://api.slack.com/custom-integrations/legacy-tokens)
@@ -48,7 +51,8 @@ You can set the configuration of the bot by using environment variables. ENVIRON
 - APP_MESSAGE='', Your OoO Message
 - APP_REMINDER=480, Time to wait before responding to person/channel again (in minutes)
 - APP_RESPOND_DM=true, If true, will respond to Direct messages
-- APP_RESPOND_CHANNEL=false, If true, will respond on Channel mentions
+- APP_RESPOND_CHANNEL=false, If true, will respond to the Channel on Channel mentions
+- APP_RESPOND_CHANNEL_PERSONAL=false, If true, (and APP_RESPOND_CHANNEL is true too), the bot replies (in Channel) to the person who mentioned you in the Channel instead of replying to the Channel.
 - APP_RESPOND_BOT=false, If true, will respond to bot messages
 - APP_RESPOND_KEYWORDS=, A comma separated list of additional keywords to respond to
 - APP_RESPONSE_DMPREFIX='Hello ${user}. I\'m currently out of the office with message:\n\n'
@@ -57,6 +61,8 @@ You can set the configuration of the bot by using environment variables. ENVIRON
 - APP_TIMEBOX_END=0, Time to stop responding (Timestamp in milliseconds, or [parsable](https://www.iso.org/iso-8601-date-and-time-format.html) date)
 - APP_ANNOUNCE_CHANNELS=general,random, A list of channels to announce OoO on
 - APP_ANNOUNCE_TIMES=08:00,16:00, A list of times to announce OoO users
+- APP_MIRROR_PINGS=false, Send all ping/mention messages to your personal @username channel.
+- APP_STEALTH_MODE=false, (Used with Mirror pings.) If true, never reply.
 - SLACK_TOKEN=xoxb-foo, Your Slack Token
 - SLACK_AUTO_RECONNECT=true, Reconnect on disconnect
 - SLACK_AUTO_MARK=false, Mark messages as read
